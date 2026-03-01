@@ -25,7 +25,7 @@ header {
   text-align: center;
   box-shadow: 6px 6px 0px #1e3a8a;
   position: relative;
-  cursor: url("assets/cursor.png") 0 0, auto; /* pixel cursor */
+  cursor: url("assets/cursor.png") 16 16, auto; /* pixel cursor */
 }
 
 header h1 {
