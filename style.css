@@ -11,22 +11,29 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* =============================
-   Header
+   Header (Pixel Computer Style)
 ============================= */
 header {
-  background: rgba(255, 255, 255, 0.85);
+  background: #87ceeb; /* sky-blue computer screen */
+  border: 6px solid #1e3a8a; /* pixel border */
+  border-radius: 12px;
   padding: 40px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 6px 6px 0px #1e3a8a;
+  position: relative;
+  cursor: url("assets/cursor.png") 0 0, auto; /* pixel cursor */
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5em;
   color: #0f172a;
+  letter-spacing: 2px;
+  font-family: 'Press Start 2P', cursive; /* optional retro pixel font if added via Google Fonts */
 }
 
 header p {
@@ -34,26 +41,43 @@ header p {
   font-size: 1.1em;
 }
 
+/* Pixel “window buttons” effect */
+header::before {
+  content: "◼ ◻ ◼";
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-size: 0.9em;
+  color: #1e3a8a;
+}
+
 /* =============================
-   Navigation
+   Navigation (Pixel Buttons)
 ============================= */
 nav {
   text-align: center;
   padding: 15px 0;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 nav a {
-  color: #0f172a;
+  display: inline-block;
+  background: #38bdf8; /* pixel button color */
+  color: white;
   text-decoration: none;
-  margin: 0 12px;
-  font-weight: 600;
+  margin: 4px;
+  padding: 8px 14px;
+  border: 3px solid #1e3a8a; /* pixel border */
+  box-shadow: 3px 3px 0px #1e3a8a; /* pixel press shadow */
+  font-weight: bold;
+  transition: 0.15s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Button press effect */
 nav a:hover {
-  color: #2563eb;
-  text-decoration: underline;
+  background: #0ea5e9;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #1e3a8a;
 }
 
 /* =============================
