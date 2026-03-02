@@ -4,75 +4,6 @@
   <title>Sasikumar Roshini's Portfolio</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: linear-gradient(to bottom, #cce7ff, #f0f8ff);
-      color: #0f172a;
-      line-height: 1.6;
-    }
-    header {
-      background: rgba(255, 255, 255, 0.8);
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #0f172a;
-    }
-    header p {
-      margin: 5px 0;
-      font-size: 1.1em;
-    }
-    nav {
-      text-align: center;
-      padding: 15px 0;
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    nav a {
-      color: #0f172a;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: #2563eb;
-      text-decoration: underline;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background: rgba(255,255,255,0.8);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    h2 {
-      color: #0f172a;
-      border-bottom: 2px solid #2563eb;
-      padding-bottom: 8px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 18px;
-      margin-top: 10px;
-      background: #2563eb;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .btn:hover {
-      background: #1e40af;
-    }
-  </style>
 </head>
 <body>
 
@@ -86,22 +17,29 @@
 </header>
 
 <nav>
-  <a href="index.html">About Me</a> |
-  <a href="work.html">Work Experience</a> |
-  <a href="volunteer.html">Volunteer</a> |
-  <a href="extras.html">CCAs & Activities</a> |
-  <a href="awards.html">Awards</a> |
+  <a href="index.html">About Me</a>
+  <a href="work.html">Work Experience</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="extras.html">CCAs & Activities</a>
+  <a href="awards.html">Awards</a>
   <a href="credentials.html">Credentials</a>
 </nav>
+<hr>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    I am a final-year Diploma student in Infocomm Security Management at Republic Polytechnic, with hands-on experience in system configuration, network monitoring, and IT project implementation. I am passionate about applying IT principles to solve real-world problems and improve digital security systems. 
-  </p>
-  <p>
-    Through both academic projects and internships, I have honed problem-solving, analytical, and teamwork abilities. I aim to continue growing my expertise in IT while contributing meaningfully to technology-driven initiatives.
-  </p>
+<section class="about-container">
+  
+  <img src="assets/abtme.png" alt="About Me Image" class="about-img">
+
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>
+      I am a final-year Diploma student in Infocomm Security Management at Republic Polytechnic, with hands-on experience in system configuration, network monitoring, and IT project implementation. I am passionate about applying IT principles to solve real-world problems and strengthening digital security systems.
+    </p>
+    <p>
+      Through academic projects and internship experiences, I have developed strong analytical thinking, adaptability, and teamwork skills. I aim to continue growing in the IT industry while contributing meaningfully to technology-driven environments.
+    </p>
+  </div>
+
 </section>
 
 <section>
@@ -117,12 +55,25 @@
 
 <section>
   <h2>Education</h2>
-  <p><strong>Republic Polytechnic</strong> (2023 – Present)</p>
-  <p>Diploma in Infocomm Security Management (Expected May 2026)</p>
 
-  <p><strong>Clementi Town Secondary School</strong> (2019 – 2022)</p>
-  <p>‘O’ Levels</p>
+  <div class="education-block">
+    <h3>Republic Polytechnic (2023 – Present)</h3>
+    <p>
+      Currently pursuing a Diploma in Infocomm Security Management, where I develop practical skills in cybersecurity, network analysis, system configuration, and IT infrastructure. Through hands-on lab projects and real-world simulations, I have strengthened my problem-solving abilities and technical competency. (Expected Graduation: May 2026)
+    </p>
+  </div>
+
+  <div class="education-block">
+    <h3>Clementi Town Secondary School (2019 – 2022)</h3>
+    <p>
+      Completed GCE ‘O’ Levels while actively developing teamwork, communication, and discipline through school involvement. This foundation shaped my adaptability and prepared me for further studies in the IT field.
+    </p>
+  </div>
+
 </section>
 
+<footer>
+  © 2026 Sasikumar Roshini
+</footer>
 </body>
 </html>
