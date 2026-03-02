@@ -5,19 +5,41 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <style>
-    .award {
-      margin-bottom: 20px;
+    /* Awards-specific styling */
+    .award-block {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 200, 255, 0.15);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 25px;
+      backdrop-filter: blur(10px);
     }
 
-    .award h3 {
-      margin: 0;
-      color: #2563eb;
-      font-size: 1.2em;
+    .award-block h3 {
+      color: #00d9ff;
+      margin-bottom: 5px;
     }
 
-    .award span {
+    .award-block .issuer {
       font-style: italic;
       color: #0f172a;
+      margin-bottom: 5px;
+    }
+
+    .award-block .date {
+      font-style: italic;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    .award-block p {
+      margin: 0;
+    }
+
+    .section-title {
+      font-weight: bold;
+      color: #2563eb;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -27,6 +49,9 @@
   <h1>Sasikumar Roshini's Portfolio</h1>
   <p>Final-Year Diploma Student | Infocomm Security Management</p>
   <p>Email: <a href="mailto:sa.roshini06@gmail.com">sa.roshini06@gmail.com</a></p>
+  <p>
+    <a href="https://www.linkedin.com/in/roshini-sasikumar/" target="_blank" class="btn">LinkedIn Profile</a>
+  </p>
 </header>
 
 <nav>
@@ -40,18 +65,58 @@
 <hr>
 
 <section>
+  <h2>Awards & Recognitions</h2>
+  <p class="section-title">Chronological listing of awards, competitions, and achievements</p>
 
-  <div class="award">
-    <h3>Singapore Mathematical Society Essay Competition — Category B Third Prize</h3>
-    <span>2021 (National Level)</span>
+  <!-- Oct 2021 -->
+  <div class="award-block">
+    <h3>National Youth Upcycling Movement 2021 – Gold Award</h3>
+    <div class="issuer">Issued by NYUM</div>
+    <div class="date">Oct 2021</div>
+    <div class="issuer">Associated with Clementi Town Secondary School</div>
+    <p>
+      Learned the impacts of human activity on global warming and importance of recycling/upcycling. 
+      Collaborated in a team to design a useful, environmentally friendly product. Developed leadership and time management skills while mass-producing within deadlines.
+    </p>
   </div>
 
-  <!-- Add more awards below this line later -->
+  <!-- Oct 2021 -->
+  <div class="award-block">
+    <h3>Singapore Mathematical Society Essay Competition – Category B Third Prize</h3>
+    <div class="issuer">Issued by Singapore Mathematical Society, Sponsored by MOE</div>
+    <div class="date">Oct 2021</div>
+    <div class="issuer">Associated with Clementi Town Secondary School</div>
+    <p>
+      Explored “Mathematics and Pandemics” theme. Learned to apply statistics and SIR models to predict and create solutions for real-world issues, enhancing research and analytical skills.
+    </p>
+  </div>
+
+  <!-- Jun 2021 -->
+  <div class="award-block">
+    <h3>1st Singapore Physics League – Bronze Award</h3>
+    <div class="issuer">Issued by SPhL</div>
+    <div class="date">Jun 2021</div>
+    <div class="issuer">Associated with Clementi Town Secondary School</div>
+    <p>
+      Gained knowledge of physics and real-life applications. Improved teamwork and problem-solving abilities through collaborative tasks.
+    </p>
+  </div>
+
+  <!-- Nov 2019 -->
+  <div class="award-block">
+    <h3>NE Youth Ambassadors Programme – Bronze</h3>
+    <div class="issuer">Issued by Singapore Discovery Centre Ltd</div>
+    <div class="date">Nov 2019</div>
+    <div class="issuer">Associated with Clementi Town Secondary School</div>
+    <p>
+      Developed teamwork with unfamiliar peers, enhanced communication skills, and became more approachable in a collaborative environment.
+    </p>
+  </div>
 
 </section>
 
 <footer>
-  © 2026 Sasikumar Roshini
+  © Sasikumar Roshini
 </footer>
 
 </body>
