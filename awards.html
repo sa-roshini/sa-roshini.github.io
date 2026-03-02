@@ -66,52 +66,71 @@
 
 <section>
   <h2>Awards & Recognitions</h2>
-  <p class="section-title">Chronological listing of awards, competitions, and achievements</p>
 
-  <!-- Oct 2021 -->
+  <section>
+  <!-- Award 1: NYUM -->
   <div class="award-block">
     <h3>National Youth Upcycling Movement 2021 – Gold Award</h3>
     <div class="issuer">Issued by NYUM</div>
     <div class="date">Oct 2021</div>
     <div class="issuer">Associated with Clementi Town Secondary School</div>
-    <p>
-      Learned the impacts of human activity on global warming and importance of recycling/upcycling. 
-      Collaborated in a team to design a useful, environmentally friendly product. Developed leadership and time management skills while mass-producing within deadlines.
-    </p>
+    <div class="award-content">
+      <p>
+        Learned the impacts of human activity on global warming and importance of recycling/upcycling. 
+        Collaborated in a team to design a useful, environmentally friendly product. Developed leadership and time management skills while mass-producing within deadlines.
+      </p>
+      <img src="assets/nyum.png" class="award-thumb" onclick="openAward(this.src)" alt="NYUM Award">
+    </div>
   </div>
 
-  <!-- Oct 2021 -->
-  <div class="award-block">
-    <h3>Singapore Mathematical Society Essay Competition – Category B Third Prize</h3>
-    <div class="issuer">Issued by Singapore Mathematical Society, Sponsored by MOE</div>
-    <div class="date">Oct 2021</div>
-    <div class="issuer">Associated with Clementi Town Secondary School</div>
-    <p>
-      Explored “Mathematics and Pandemics” theme. Learned to apply statistics and SIR models to predict and create solutions for real-world issues, enhancing research and analytical skills.
-    </p>
-  </div>
-
-  <!-- Jun 2021 -->
+  <!-- Award 2: Physics -->
   <div class="award-block">
     <h3>1st Singapore Physics League – Bronze Award</h3>
     <div class="issuer">Issued by SPhL</div>
     <div class="date">Jun 2021</div>
     <div class="issuer">Associated with Clementi Town Secondary School</div>
-    <p>
-      Gained knowledge of physics and real-life applications. Improved teamwork and problem-solving abilities through collaborative tasks.
-    </p>
+    <div class="award-content">
+      <p>
+        Gained knowledge about physics and its real-life applications. Improved teamwork skills while completing collaborative tasks.
+      </p>
+      <img src="assets/physics.png" class="award-thumb" onclick="openAward(this.src)" alt="Physics Award">
+    </div>
   </div>
 
-  <!-- Nov 2019 -->
+  <!-- Award 3: Math Essay -->
   <div class="award-block">
-    <h3>NE Youth Ambassadors Programme – Bronze</h3>
+    <h3>Singapore Mathematical Society Essay Competition – Category B Third Prize</h3>
+    <div class="issuer">Issued by Singapore Mathematical Society, Sponsored by MOE</div>
+    <div class="date">Oct 2021</div>
+    <div class="issuer">Associated with Clementi Town Secondary School</div>
+    <div class="award-content">
+      <p>
+        Researched "Mathematics and Pandemics". Used SIR models to predict outcomes and propose solutions. Learned how math impacts real-world issues.
+      </p>
+      <img src="assets/mathessay.png" class="award-thumb" onclick="openAward(this.src)" alt="Math Essay Award">
+    </div>
+  </div>
+
+  <!-- Award 4: NE Ambassadors -->
+  <div class="award-block">
+    <h3>NE Youth Ambassadors Programme – Bronze Award</h3>
     <div class="issuer">Issued by Singapore Discovery Centre Ltd</div>
     <div class="date">Nov 2019</div>
     <div class="issuer">Associated with Clementi Town Secondary School</div>
-    <p>
-      Developed teamwork with unfamiliar peers, enhanced communication skills, and became more approachable in a collaborative environment.
-    </p>
+    <div class="award-content">
+      <p>
+        Learned teamwork and communication skills while collaborating with unfamiliar peers. Developed approachability and leadership abilities.
+      </p>
+      <img src="assets/neamb.png" class="award-thumb" onclick="openAward(this.src)" alt="NE Ambassadors Award">
+    </div>
   </div>
+</section>
+
+<!-- Modal popup (place AFTER section) -->
+<div id="award-modal" class="award-modal" onclick="closeAward()">
+  <span class="close-btn" onclick="closeAward(event)">✖</span>
+  <img class="award-full" id="award-full">
+</div>
 
 </section>
 
