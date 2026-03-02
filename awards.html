@@ -4,44 +4,6 @@
   <title>Awards | Sasikumar Roshini</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Awards-specific styling */
-    .award-block {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(0, 200, 255, 0.15);
-      border-radius: 15px;
-      padding: 20px;
-      margin-bottom: 25px;
-      backdrop-filter: blur(10px);
-    }
-
-    .award-block h3 {
-      color: #00d9ff;
-      margin-bottom: 5px;
-    }
-
-    .award-block .issuer {
-      font-style: italic;
-      color: #0f172a;
-      margin-bottom: 5px;
-    }
-
-    .award-block .date {
-      font-style: italic;
-      color: #1e293b;
-      margin-bottom: 10px;
-    }
-
-    .award-block p {
-      margin: 0;
-    }
-
-    .section-title {
-      font-weight: bold;
-      color: #2563eb;
-      margin-bottom: 15px;
-    }
-  </style>
 </head>
 <body>
 
@@ -67,7 +29,6 @@
 <section>
   <h2>Awards & Recognitions</h2>
 
-  <section>
   <!-- Award 1: NYUM -->
   <div class="award-block">
     <h3>National Youth Upcycling Movement 2021 – Gold Award</h3>
@@ -126,17 +87,29 @@
   </div>
 </section>
 
-<!-- Modal popup (place AFTER section) -->
+<!-- Modal popup (place BEFORE footer) -->
 <div id="award-modal" class="award-modal" onclick="closeAward()">
   <span class="close-btn" onclick="closeAward(event)">✖</span>
   <img class="award-full" id="award-full">
 </div>
 
-</section>
-
 <footer>
   © Sasikumar Roshini
 </footer>
+
+<script>
+  function openAward(src) {
+    const modal = document.getElementById('award-modal');
+    const fullImg = document.getElementById('award-full');
+    fullImg.src = src;
+    modal.style.display = 'flex';
+  }
+
+  function closeAward(event) {
+    if (event) event.stopPropagation(); // prevent closing modal when clicking close button
+    document.getElementById('award-modal').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
