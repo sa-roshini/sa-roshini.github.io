@@ -264,7 +264,7 @@ footer {
   padding: 15px;
 
   /* NEW: small background image */
-  background-image: url('assets/carousel-bg.png'); /* path to your small image */
+  background-image: url('assets/carouselbg.png'); /* path to your small image */
   background-repeat: repeat;       /* repeats small image */
   background-position: center;     /* centers image */
   background-size: auto 50px;      /* adjust size of background */
