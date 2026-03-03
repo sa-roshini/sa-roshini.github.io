@@ -252,3 +252,20 @@ footer {
     min-height: 250px;
   }
 }
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  margin: 30px auto;
+  overflow: hidden;
+  border: 4px solid #1e3a8a;
+  box-shadow: 6px 6px 0px #1e3a8a;
+  background: linear-gradient(to bottom, #ffffff, #eaf6ff);
+  padding: 15px;
+
+  /* NEW: small background image */
+  background-image: url('assets/carousel-bg.png'); /* path to your small image */
+  background-repeat: repeat;       /* repeats small image */
+  background-position: center;     /* centers image */
+  background-size: auto 50px;      /* adjust size of background */
+}
