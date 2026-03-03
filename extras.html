@@ -49,16 +49,48 @@
     <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
 
     <div class="carousel">
-      <img src="assets/e1.jpg" class="carousel-img">
-      <img src="assets/e2.jpg" class="carousel-img">
-      <img src="assets/e3.jpg" class="carousel-img">
-      <img src="assets/e4.jpg" class="carousel-img">
-      <img src="assets/e5.jpg" class="carousel-img">
-      <img src="assets/e6.jpg" class="carousel-img">
-      <img src="assets/e7.jpg" class="carousel-img">
-      <img src="assets/e8.jpg" class="carousel-img">
-      <img src="assets/e9.jpg" class="carousel-img">
-    </div>
+  
+  <div class="slide">
+    <img src="japangrppic.jpg" class="carousel-img">
+    <p class="carousel-caption">International SOI Study Trip – Japan 2024</p>
+  </div>
+
+  <div class="slide">
+    <img src="senjacashew.jpg" class="carousel-img">
+    <p class="carousel-caption">SOI - CSA's Be Cyber Safe Workshop for Seniors - 8 Mar 2025</p>
+  </div>
+
+  <div class="slide">
+    <img src="soictf.png" class="carousel-img">
+    <p class="carousel-caption">SOI CTF Competition</p>
+  </div>
+
+  <div class="slide">
+    <img src="aws.jpg" class="carousel-img">
+    <p class="carousel-caption">Volunteered for AWS Deepracer Booth in RP Open House</p>
+  </div>
+
+  <div class="slide">
+    <img src="japanbus.jpg" class="carousel-img">
+    <p class="carousel-caption">Exploring Japan – Study Trip</p>
+  </div>
+
+  <div class="slide">
+    <img src="missionxgrpa.jpg" class="carousel-img">
+    <p class="carousel-caption">Mission X</p>
+  </div>
+
+  <div class="slide">
+    <img src="op.png" class="carousel-img">
+    <p class="carousel-caption">Orientation Programme Leader</p>
+  </div>
+
+  <div class="slide">
+    <img src="opslt.jpg" class="carousel-img">
+    <p class="carousel-caption">Orientation Programme Training</p>
+  </div>
+
+</div>
 
     <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
   </div>
@@ -108,8 +140,8 @@ let currentIndex = 0;
 
 function moveSlide(direction) {
   const carousel = document.querySelector('.carousel');
-  const images = document.querySelectorAll('.carousel-img');
-  const totalSlides = images.length;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
 
   currentIndex += direction;
 
