@@ -30,12 +30,13 @@
 <section>
   <h2>Awards & Recognitions</h2>
 
-  <!-- Award 1: NYUM -->
+  <!-- Award 1 -->
   <div class="award-block">
     <h3>National Youth Upcycling Movement 2021 – Gold Award</h3>
     <div class="issuer">Issued by NYUM</div>
     <div class="date">Oct 2021</div>
     <div class="issuer">Associated with Clementi Town Secondary School</div>
+
     <div class="award-content">
       <p>
         Learned the impacts of human activity on global warming and importance of recycling/upcycling. 
@@ -45,12 +46,13 @@
     </div>
   </div>
 
-  <!-- Award 2: Physics -->
+  <!-- Award 2 -->
   <div class="award-block">
     <h3>1st Singapore Physics League – Bronze Award</h3>
     <div class="issuer">Issued by SPhL</div>
     <div class="date">Jun 2021</div>
     <div class="issuer">Associated with Clementi Town Secondary School</div>
+
     <div class="award-content">
       <p>
         Gained knowledge about physics and its real-life applications. Improved teamwork skills while completing collaborative tasks.
@@ -59,12 +61,13 @@
     </div>
   </div>
 
-  <!-- Award 3: Math Essay -->
+  <!-- Award 3 -->
   <div class="award-block">
     <h3>Singapore Mathematical Society Essay Competition – Category B Third Prize</h3>
     <div class="issuer">Issued by Singapore Mathematical Society, Sponsored by MOE</div>
     <div class="date">Oct 2021</div>
     <div class="issuer">Associated with Clementi Town Secondary School</div>
+
     <div class="award-content">
       <p>
         Researched "Mathematics and Pandemics". Used SIR models to predict outcomes and propose solutions. Learned how math impacts real-world issues.
@@ -73,12 +76,13 @@
     </div>
   </div>
 
-  <!-- Award 4: NE Ambassadors -->
+  <!-- Award 4 -->
   <div class="award-block">
     <h3>NE Youth Ambassadors Programme – Bronze Award</h3>
     <div class="issuer">Issued by Singapore Discovery Centre Ltd</div>
     <div class="date">Nov 2019</div>
     <div class="issuer">Associated with Clementi Town Secondary School</div>
+
     <div class="award-content">
       <p>
         Learned teamwork and communication skills while collaborating with unfamiliar peers. Developed approachability and leadership abilities.
@@ -88,7 +92,7 @@
   </div>
 </section>
 
-<!-- Modal popup (place BEFORE footer) -->
+<!-- Modal popup -->
 <div id="award-modal" class="award-modal" onclick="closeAward()">
   <span class="close-btn" onclick="closeAward(event)">✖</span>
   <img class="award-full" id="award-full">
@@ -107,7 +111,7 @@
   }
 
   function closeAward(event) {
-    if (event) event.stopPropagation(); // prevent closing modal when clicking close button
+    if (event) event.stopPropagation(); 
     document.getElementById('award-modal').style.display = 'none';
   }
 </script>
