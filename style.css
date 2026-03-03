@@ -151,7 +151,13 @@ ul {
   box-shadow: 6px 6px 0px #1e3a8a;
   background: linear-gradient(to bottom, #ffffff, #eaf6ff);
   padding: 15px;
-  min-height: 380px; /* ensures container doesn’t collapse on vertical images */
+  min-height: 380px;
+
+  /* NEW: small background image */
+  background-image: url('assets/carouselbg.png');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto 50px;
 }
 
 .carousel {
@@ -167,14 +173,14 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #f0f8ff; /* padding behind vertical images */
+  background: #f0f8ff;
 }
 
 .carousel-img {
   width: auto;
   max-width: 100%;
   max-height: 380px;
-  object-fit: contain; /* shows full vertical/horizontal images */
+  object-fit: contain;
   border-radius: 8px;
   border: 3px solid #1e3a8a;
 }
@@ -216,6 +222,35 @@ ul {
 }
 
 /* =============================
+   About Me Side-by-Side
+============================= */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-frame {
+  flex: 0 0 auto;
+}
+
+.about-img {
+  width: 260px;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.about-text {
+  flex: 1;
+  border: 4px solid #1e3a8a;
+  padding: 25px;
+  background: linear-gradient(to bottom, #ffffff, #f5fbff);
+  box-shadow: 6px 6px 0px #1e3a8a;
+}
+
+/* =============================
    Footer
 ============================= */
 footer {
@@ -251,21 +286,13 @@ footer {
   .carousel-container {
     min-height: 250px;
   }
-}
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 850px;
-  margin: 30px auto;
-  overflow: hidden;
-  border: 4px solid #1e3a8a;
-  box-shadow: 6px 6px 0px #1e3a8a;
-  background: linear-gradient(to bottom, #ffffff, #eaf6ff);
-  padding: 15px;
 
-  /* NEW: small background image */
-  background-image: url('assets/carouselbg.png'); /* path to your small image */
-  background-repeat: repeat;       /* repeats small image */
-  background-position: center;     /* centers image */
-  background-size: auto 50px;      /* adjust size of background */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    width: 100%;
+  }
 }
