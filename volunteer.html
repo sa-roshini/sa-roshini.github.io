@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Volunteer | Sasikumar Roshini</title>
+  <title>Credentials | Sasikumar Roshini</title>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon1.png">
   <link rel="stylesheet" href="style.css">
@@ -28,87 +28,53 @@
 <hr>
 
 <section>
-  <h2>Volunteer Experience</h2>
+  <h2>Credentials</h2>
 
-  <!-- 2025 -->
-  <div class="year-block">
-    <h3>2025</h3>
-    <ul>
-      <li>SOI – CSA's Be Cyber Safe Workshop for Seniors — 8 Mar 2025</li>
-      <li>Mobile Grocery Distribution</li>
-      <li>Still . I Rise – Performance</li>
-      <li>MAD TALKS: Care Community Services Society Sharing</li>
-      <li>MAD TALKS: Canberra CC Sharing</li>
-      <li>MAD TALKS: ISLP Sharing</li>
-      <li>Community Mission X — 18–20 Jun 2025</li>
-      <li>Tertiary Post National Day Rally Dialogue 2025</li>
-      <li>Senior Profiling Initiative with Blossom Seeds</li>
-      <li>S-L Workshop: Building a Dementia-Inclusive Community</li>
-      <li>S-L Workshop: Service-Learning, a Way of Life</li>
-      <li>Mendaki MARA Polytechnic 2025</li>
-      <li>PA Admiralty YOUnity Harmony Walk 2025</li>
-    </ul>
-  </div>
-
-  <!-- 2024 -->
-  <div class="year-block">
-    <h3>2024</h3>
-    <ul>
-      <li>Local Service-Learning Project: Kids Anew Talent Show</li>
-      <li>Local Service-Learning Project: Developing Problem-Solving Skills of Young Learners</li>
-      <li>Kids Anew: A Local Service-Learning Project</li>
-    </ul>
-  </div>
-
-  <!-- Volunteer Carousel (after 2024) -->
-  <div class="carousel-container volunteer-carousel-container">
-    <button class="carousel-btn prev" onclick="moveVolunteerSlide(-1)">❮</button>
-    <div class="carousel volunteer-carousel">
-      <!-- Slide 1 -->
-      <div class="slide">
-        <img src="assets/missionxtable.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
-        <p class="carousel-caption">Mission X Workshop Table</p>
-      </div>
-      <!-- Slide 2 -->
-      <div class="slide">
-        <img src="assets/missionxgrp.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
-        <p class="carousel-caption">Community Mission X Group</p>
-      </div>
-      <!-- Slide 3 -->
-      <div class="slide">
-        <img src="assets/slcsembawang.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
-        <p class="carousel-caption">Sembawang Community Engagement</p>
-      </div>
-      <!-- Slide 4 -->
-      <div class="slide">
-        <img src="assets/ignite.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
-        <p class="carousel-caption">Ignite Youth Programme</p>
-      </div>
-      <!-- Slide 5 -->
-      <div class="slide">
-        <img src="assets/kidsanew.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
-        <p class="carousel-caption">Kids Anew Volunteer Activity</p>
-      </div>
-      <!-- Slide 6 -->
-      <div class="slide">
-        <img src="assets/worldskills.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
-        <p class="carousel-caption">WorldSkills Volunteering Event</p>
-      </div>
-      <!-- Slide 7 -->
-      <div class="slide">
-        <img src="assets/hrhsmobiledistrubution.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
-        <p class="carousel-caption">HRHS Mobile Distribution</p>
-      </div>
+  <!-- Credential 1 -->
+  <div class="award-block">
+    <h3>Certified Ethical Hacker (CEH)</h3>
+    <div class="issuer">Issued by EC-Council</div>
+    <div class="date">Dec 2023</div>
+    <div class="credential-content">
+      <p>
+        Gained practical skills in penetration testing, network security, and ethical hacking techniques. Enhanced problem-solving skills in realistic scenarios.
+      </p>
+      <img src="assets/ceh.png" class="award-thumb" onclick="openCredential(this.src)" alt="CEH Credential">
     </div>
-    <button class="carousel-btn next" onclick="moveVolunteerSlide(1)">❯</button>
+  </div>
+
+  <!-- Credential 2 -->
+  <div class="award-block">
+    <h3>CompTIA Security+ Certification</h3>
+    <div class="issuer">Issued by CompTIA</div>
+    <div class="date">Aug 2023</div>
+    <div class="credential-content">
+      <p>
+        Validated foundational knowledge in cybersecurity, risk management, and threat assessment. Improved analytical and security operations skills.
+      </p>
+      <img src="assets/securityplus.png" class="award-thumb" onclick="openCredential(this.src)" alt="Security+ Credential">
+    </div>
+  </div>
+
+  <!-- Credential 3 -->
+  <div class="award-block">
+    <h3>Microsoft Azure Fundamentals (AZ-900)</h3>
+    <div class="issuer">Issued by Microsoft</div>
+    <div class="date">Jul 2023</div>
+    <div class="credential-content">
+      <p>
+        Demonstrated understanding of cloud concepts, Azure services, security, privacy, and compliance. Strengthened cloud technology knowledge for real-world applications.
+      </p>
+      <img src="assets/azure.png" class="award-thumb" onclick="openCredential(this.src)" alt="Azure Credential">
+    </div>
   </div>
 
 </section>
 
-<!-- Volunteer Modal -->
-<div id="volunteer-modal" class="award-modal" onclick="closeVolunteer()">
-  <span class="close-btn" onclick="closeVolunteer(event)">✖</span>
-  <img class="award-full" id="volunteer-full">
+<!-- Credential Modal -->
+<div id="credential-modal" class="award-modal" onclick="closeCredential()">
+  <span class="close-btn" onclick="closeCredential(event)">✖</span>
+  <img class="award-full" id="credential-full">
 </div>
 
 <footer>
@@ -116,29 +82,16 @@
 </footer>
 
 <script>
-  // Carousel
-  let volunteerIndex = 0;
-  function moveVolunteerSlide(direction) {
-    const carousel = document.querySelector('.volunteer-carousel');
-    const slides = document.querySelectorAll('.volunteer-carousel .slide');
-    const total = slides.length;
-    volunteerIndex += direction;
-    if (volunteerIndex < 0) volunteerIndex = total - 1;
-    if (volunteerIndex >= total) volunteerIndex = 0;
-    carousel.style.transform = `translateX(-${volunteerIndex * 100}%)`;
-  }
-
-  // Modal
-  function openVolunteer(src) {
-    const modal = document.getElementById('volunteer-modal');
-    const fullImg = document.getElementById('volunteer-full');
+  function openCredential(src) {
+    const modal = document.getElementById('credential-modal');
+    const fullImg = document.getElementById('credential-full');
     fullImg.src = src;
     modal.style.display = 'flex';
   }
 
-  function closeVolunteer(event) {
+  function closeCredential(event) {
     if (event) event.stopPropagation();
-    document.getElementById('volunteer-modal').style.display = 'none';
+    document.getElementById('credential-modal').style.display = 'none';
   }
 </script>
 
