@@ -5,87 +5,6 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon1.png">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* VOLUNTEER CAROUSEL STYLING (ISOLATED) */
-    .volunteer-carousel-container {
-      position: relative;
-      width: 100%;
-      max-width: 850px;
-      margin: 25px auto;
-      overflow: hidden;
-      border: 4px solid #1e3a8a;
-      box-shadow: 6px 6px 0px #1e3a8a;
-      background: linear-gradient(to bottom, #ffffff, #eaf6ff);
-      padding: 15px;
-      min-height: 380px;
-    }
-
-    .volunteer-carousel {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-    }
-
-    .volunteer-slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: #f0f8ff;
-    }
-
-    .volunteer-carousel-img {
-      width: auto;
-      max-width: 100%;
-      max-height: 380px;
-      object-fit: contain;
-      border-radius: 8px;
-      border: 3px solid #1e3a8a;
-    }
-
-    .volunteer-caption {
-      margin-top: 12px;
-      font-size: 0.95em;
-      font-weight: 600;
-      color: #0f172a;
-    }
-
-    .volunteer-carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #38bdf8;
-      border: 3px solid #1e3a8a;
-      box-shadow: 3px 3px 0px #1e3a8a;
-      color: white;
-      font-size: 18px;
-      padding: 6px 10px;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    .volunteer-carousel-btn:hover {
-      background: #0ea5e9;
-      transform: translateY(-50%) translate(2px, 2px);
-      box-shadow: 1px 1px 0px #1e3a8a;
-    }
-
-    .prev-vol { left: 10px; }
-    .next-vol { right: 10px; }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .volunteer-carousel-img {
-        max-height: 250px;
-      }
-
-      .volunteer-carousel-container {
-        min-height: 250px;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -141,44 +60,44 @@
     </ul>
   </div>
 
-  <!-- Volunteer Carousel (7 images) -->
+  <!-- Volunteer Carousel -->
   <div class="volunteer-carousel-container">
     <button class="volunteer-carousel-btn prev-vol" onclick="moveVolunteerSlide(-1)">❮</button>
     <div class="volunteer-carousel">
 
       <div class="volunteer-slide">
-        <img src="assets/hrhsmobiledistrubution.jpg" class="volunteer-carousel-img">
-        <p class="volunteer-caption">HRHS Mobile Distribution</p>
-      </div>
-
-      <div class="volunteer-slide">
-        <img src="assets/missionxgrp.jpg" class="volunteer-carousel-img">
-        <p class="volunteer-caption">Community Mission X Group</p>
-      </div>
-
-      <div class="volunteer-slide">
-        <img src="assets/missionxtable.jpg" class="volunteer-carousel-img">
+        <img src="assets/missionxtable.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
         <p class="volunteer-caption">Mission X Workshop Table</p>
       </div>
 
       <div class="volunteer-slide">
-        <img src="assets/sembawang.jpg" class="volunteer-carousel-img">
+        <img src="assets/missionxgrp.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
+        <p class="volunteer-caption">Community Mission X Group</p>
+      </div>
+
+      <div class="volunteer-slide">
+        <img src="assets/sembawang.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
         <p class="volunteer-caption">Sembawang Community Engagement</p>
       </div>
 
       <div class="volunteer-slide">
-        <img src="assets/ignite.jpg" class="volunteer-carousel-img">
+        <img src="assets/ignite.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
         <p class="volunteer-caption">Ignite Youth Programme</p>
       </div>
 
       <div class="volunteer-slide">
-        <img src="assets/kidsanew.jpg" class="volunteer-carousel-img">
+        <img src="assets/kidsanew.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
         <p class="volunteer-caption">Kids Anew Volunteer Activity</p>
       </div>
 
       <div class="volunteer-slide">
-        <img src="assets/worldskills.jpg" class="volunteer-carousel-img">
+        <img src="assets/worldskills.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
         <p class="volunteer-caption">WorldSkills Volunteering Event</p>
+      </div>
+
+      <div class="volunteer-slide">
+        <img src="assets/hrhsmobiledistrubution.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
+        <p class="volunteer-caption">HRHS Mobile Distribution</p>
       </div>
 
     </div>
@@ -187,28 +106,40 @@
 
 </section>
 
+<!-- Volunteer Modal -->
+<div id="volunteer-modal" class="volunteer-modal" onclick="closeVolunteer()">
+  <span class="close-btn" onclick="closeVolunteer(event)">✖</span>
+  <img class="volunteer-full" id="volunteer-full">
+</div>
+
 <footer>
   © Sasikumar Roshini
 </footer>
 
 <script>
-  // Volunteer Carousel JS
+  // Carousel logic
   let volunteerIndex = 0;
-
   function moveVolunteerSlide(direction) {
     const carousel = document.querySelector('.volunteer-carousel');
     const slides = document.querySelectorAll('.volunteer-slide');
-    const totalSlides = slides.length;
-
+    const total = slides.length;
     volunteerIndex += direction;
-
-    if (volunteerIndex < 0) {
-      volunteerIndex = totalSlides - 1;
-    } else if (volunteerIndex >= totalSlides) {
-      volunteerIndex = 0;
-    }
-
+    if (volunteerIndex < 0) volunteerIndex = total - 1;
+    if (volunteerIndex >= total) volunteerIndex = 0;
     carousel.style.transform = `translateX(-${volunteerIndex * 100}%)`;
+  }
+
+  // Modal logic
+  function openVolunteer(src) {
+    const modal = document.getElementById('volunteer-modal');
+    const fullImg = document.getElementById('volunteer-full');
+    fullImg.src = src;
+    modal.style.display = 'flex';
+  }
+
+  function closeVolunteer(event) {
+    if (event) event.stopPropagation();
+    document.getElementById('volunteer-modal').style.display = 'none';
   }
 </script>
 
