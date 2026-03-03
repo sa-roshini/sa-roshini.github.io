@@ -60,56 +60,55 @@
     </ul>
   </div>
 
-  <!-- Volunteer Carousel -->
-  <div class="volunteer-carousel-container">
-    <button class="volunteer-carousel-btn prev-vol" onclick="moveVolunteerSlide(-1)">❮</button>
-    <div class="volunteer-carousel">
-
-      <div class="volunteer-slide">
-        <img src="assets/missionxtable.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
-        <p class="volunteer-caption">Mission X Workshop Table</p>
+  <!-- Volunteer Carousel (after 2024) -->
+  <div class="carousel-container volunteer-carousel-container">
+    <button class="carousel-btn prev" onclick="moveVolunteerSlide(-1)">❮</button>
+    <div class="carousel volunteer-carousel">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <img src="assets/missionxtable.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
+        <p class="carousel-caption">Mission X Workshop Table</p>
       </div>
-
-      <div class="volunteer-slide">
-        <img src="assets/missionxgrp.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
-        <p class="volunteer-caption">Community Mission X Group</p>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="assets/missionxgrp.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
+        <p class="carousel-caption">Community Mission X Group</p>
       </div>
-
-      <div class="volunteer-slide">
-        <img src="assets/sembawang.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
-        <p class="volunteer-caption">Sembawang Community Engagement</p>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="assets/sembawang.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
+        <p class="carousel-caption">Sembawang Community Engagement</p>
       </div>
-
-      <div class="volunteer-slide">
-        <img src="assets/ignite.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
-        <p class="volunteer-caption">Ignite Youth Programme</p>
+      <!-- Slide 4 -->
+      <div class="slide">
+        <img src="assets/ignite.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
+        <p class="carousel-caption">Ignite Youth Programme</p>
       </div>
-
-      <div class="volunteer-slide">
-        <img src="assets/kidsanew.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
-        <p class="volunteer-caption">Kids Anew Volunteer Activity</p>
+      <!-- Slide 5 -->
+      <div class="slide">
+        <img src="assets/kidsanew.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
+        <p class="carousel-caption">Kids Anew Volunteer Activity</p>
       </div>
-
-      <div class="volunteer-slide">
-        <img src="assets/worldskills.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
-        <p class="volunteer-caption">WorldSkills Volunteering Event</p>
+      <!-- Slide 6 -->
+      <div class="slide">
+        <img src="assets/worldskills.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
+        <p class="carousel-caption">WorldSkills Volunteering Event</p>
       </div>
-
-      <div class="volunteer-slide">
-        <img src="assets/hrhsmobiledistrubution.jpg" class="volunteer-carousel-img" onclick="openVolunteer(this.src)">
-        <p class="volunteer-caption">HRHS Mobile Distribution</p>
+      <!-- Slide 7 -->
+      <div class="slide">
+        <img src="assets/hrhsmobiledistrubution.jpg" class="carousel-img" onclick="openVolunteer(this.src)">
+        <p class="carousel-caption">HRHS Mobile Distribution</p>
       </div>
-
     </div>
-    <button class="volunteer-carousel-btn next-vol" onclick="moveVolunteerSlide(1)">❯</button>
+    <button class="carousel-btn next" onclick="moveVolunteerSlide(1)">❯</button>
   </div>
 
 </section>
 
 <!-- Volunteer Modal -->
-<div id="volunteer-modal" class="volunteer-modal" onclick="closeVolunteer()">
+<div id="volunteer-modal" class="award-modal" onclick="closeVolunteer()">
   <span class="close-btn" onclick="closeVolunteer(event)">✖</span>
-  <img class="volunteer-full" id="volunteer-full">
+  <img class="award-full" id="volunteer-full">
 </div>
 
 <footer>
@@ -117,11 +116,11 @@
 </footer>
 
 <script>
-  // Carousel logic
+  // Carousel
   let volunteerIndex = 0;
   function moveVolunteerSlide(direction) {
     const carousel = document.querySelector('.volunteer-carousel');
-    const slides = document.querySelectorAll('.volunteer-slide');
+    const slides = document.querySelectorAll('.volunteer-carousel .slide');
     const total = slides.length;
     volunteerIndex += direction;
     if (volunteerIndex < 0) volunteerIndex = total - 1;
@@ -129,7 +128,7 @@
     carousel.style.transform = `translateX(-${volunteerIndex * 100}%)`;
   }
 
-  // Modal logic
+  // Modal
   function openVolunteer(src) {
     const modal = document.getElementById('volunteer-modal');
     const fullImg = document.getElementById('volunteer-full');
