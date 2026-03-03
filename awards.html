@@ -5,6 +5,81 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon1.png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* AWARDS/CREDENTIALS SPECIFIC STYLING */
+    .award-block, .credential-block {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: linear-gradient(to bottom, #ffffff, #eaf6ff);
+      border: 4px solid #1e3a8a;
+      box-shadow: 6px 6px 0px #1e3a8a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .award-text, .credential-text {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .award-thumb, .credential-thumb {
+      width: 140px;
+      height: auto;
+      border: 3px solid #1e3a8a;
+      border-radius: 8px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* Modal for full-size image */
+    .award-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .award-modal img.award-full {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid #fff;
+      border-radius: 10px;
+    }
+
+    .award-modal .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 28px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      .award-block, .credential-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .award-text, .credential-text {
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -32,64 +107,61 @@
 
   <!-- Award 1 -->
   <div class="award-block">
-    <h3>National Youth Upcycling Movement 2021 – Gold Award</h3>
-    <div class="issuer">Issued by NYUM</div>
-    <div class="date">Oct 2021</div>
-    <div class="issuer">Associated with Clementi Town Secondary School</div>
-
-    <div class="award-content">
+    <div class="award-text">
+      <h3>National Youth Upcycling Movement 2021 – Gold Award</h3>
+      <div class="issuer">Issued by NYUM</div>
+      <div class="date">Oct 2021</div>
+      <div class="issuer">Associated with Clementi Town Secondary School</div>
       <p>
         Learned the impacts of human activity on global warming and importance of recycling/upcycling. 
         Collaborated in a team to design a useful, environmentally friendly product. Developed leadership and time management skills while mass-producing within deadlines.
       </p>
-      <img src="assets/nyum.png" class="award-thumb" onclick="openAward(this.src)" alt="NYUM Award">
     </div>
+    <img src="assets/nyum.png" class="award-thumb" onclick="openAward(this.src)" alt="NYUM Award">
   </div>
 
   <!-- Award 2 -->
   <div class="award-block">
-    <h3>1st Singapore Physics League – Bronze Award</h3>
-    <div class="issuer">Issued by SPhL</div>
-    <div class="date">Jun 2021</div>
-    <div class="issuer">Associated with Clementi Town Secondary School</div>
-
-    <div class="award-content">
+    <div class="award-text">
+      <h3>1st Singapore Physics League – Bronze Award</h3>
+      <div class="issuer">Issued by SPhL</div>
+      <div class="date">Jun 2021</div>
+      <div class="issuer">Associated with Clementi Town Secondary School</div>
       <p>
         Gained knowledge about physics and its real-life applications. Improved teamwork skills while completing collaborative tasks.
       </p>
-      <img src="assets/physics.png" class="award-thumb" onclick="openAward(this.src)" alt="Physics Award">
     </div>
+    <img src="assets/physics.png" class="award-thumb" onclick="openAward(this.src)" alt="Physics Award">
   </div>
 
   <!-- Award 3 -->
   <div class="award-block">
-    <h3>Singapore Mathematical Society Essay Competition – Category B Third Prize</h3>
-    <div class="issuer">Issued by Singapore Mathematical Society, Sponsored by MOE</div>
-    <div class="date">Oct 2021</div>
-    <div class="issuer">Associated with Clementi Town Secondary School</div>
-
-    <div class="award-content">
+    <div class="award-text">
+      <h3>Singapore Mathematical Society Essay Competition – Category B Third Prize</h3>
+      <div class="issuer">Issued by Singapore Mathematical Society, Sponsored by MOE</div>
+      <div class="date">Oct 2021</div>
+      <div class="issuer">Associated with Clementi Town Secondary School</div>
       <p>
         Researched "Mathematics and Pandemics". Used SIR models to predict outcomes and propose solutions. Learned how math impacts real-world issues.
       </p>
-      <img src="assets/mathessay.png" class="award-thumb" onclick="openAward(this.src)" alt="Math Essay Award">
     </div>
+    <img src="assets/mathessay.png" class="award-thumb" onclick="openAward(this.src)" alt="Math Essay Award">
   </div>
 
   <!-- Award 4 -->
   <div class="award-block">
-    <h3>NE Youth Ambassadors Programme – Bronze Award</h3>
-    <div class="issuer">Issued by Singapore Discovery Centre Ltd</div>
-    <div class="date">Nov 2019</div>
-    <div class="issuer">Associated with Clementi Town Secondary School</div>
-
-    <div class="award-content">
+    <div class="award-text">
+      <h3>NE Youth Ambassadors Programme – Bronze Award</h3>
+      <div class="issuer">Issued by Singapore Discovery Centre Ltd</div>
+      <div class="date">Nov 2019</div>
+      <div class="issuer">Associated with Clementi Town Secondary School</div>
       <p>
         Learned teamwork and communication skills while collaborating with unfamiliar peers. Developed approachability and leadership abilities.
       </p>
-      <img src="assets/neamb.png" class="award-thumb" onclick="openAward(this.src)" alt="NE Ambassadors Award">
     </div>
+    <img src="assets/neamb.png" class="award-thumb" onclick="openAward(this.src)" alt="NE Ambassadors Award">
   </div>
+
 </section>
 
 <!-- Modal popup -->
@@ -111,7 +183,7 @@
   }
 
   function closeAward(event) {
-    if (event) event.stopPropagation(); 
+    if (event) event.stopPropagation();
     document.getElementById('award-modal').style.display = 'none';
   }
 </script>
